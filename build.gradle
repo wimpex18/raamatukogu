@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'raamatukogu'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+
+    compile group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '3.6.2'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.5.1")
+
+}
+
+test {
+    useJUnitPlatform()
+}
